@@ -43,8 +43,9 @@ export function Hero() {
                   />
                   <video
                     src="/lace-up.mp4"
+                    al
                     width={500}
-                    height={500}
+                    height={300}
                     className="object-cover object-center"
                     autoPlay
                     muted

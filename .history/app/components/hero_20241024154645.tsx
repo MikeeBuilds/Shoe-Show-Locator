@@ -35,7 +35,7 @@ export function Hero() {
               <div className="relative w-full max-w-lg mx-auto lg:max-w-md">
                 <div className="relative aspect-w-5 aspect-h-3 rounded-lg bg-gray-100 dark:bg-black shadow-lg overflow-hidden">
                   <BorderBeam 
-                    size={250}
+                    size={750}
                     duration={12}
                     delay={9}
                     colorFrom="rgb(236, 168, 72)"
