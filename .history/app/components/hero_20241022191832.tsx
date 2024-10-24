@@ -9,7 +9,7 @@ export function Hero() {
     <div className="relative overflow-hidden bg-background text-foreground">
       <GridPattern
         className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 dark:fill-neutral-950 dark:stroke-neutral-100/5"
-        y={-96}
+        yOffset={-96}
         squares={[
           [4, 3],
           [2, 1],
@@ -44,7 +44,7 @@ export function Hero() {
                   />
                   {/* Replace with your product image */}
                   <Image
-                    src="/ipad-gif.gif"
+                    src="/feat"
                     alt="Product showcase"
                     width={500}
                     height={300}

@@ -1,25 +1,29 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
-const config: Config = {
-    darkMode: ["class"],
-    content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config = {
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
+  prefix: "",
   theme: {
+  	container: {
+  		center: 'true',
+  		padding: '2rem',
+  		screens: {
+  			'2xl': '1400px'
+  		}
+  	},
   	extend: {
   		colors: {
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
@@ -27,6 +31,10 @@ const config: Config = {
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
   			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
@@ -36,19 +44,13 @@ const config: Config = {
   				DEFAULT: 'hsl(var(--accent))',
   				foreground: 'hsl(var(--accent-foreground))'
   			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
   			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
   			},
   			'color-1': 'hsl(var(--color-1))',
   			'color-2': 'hsl(var(--color-2))',
@@ -62,44 +64,25 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
-  			marquee: {
+  			'accordion-down': {
   				from: {
-  					transform: 'translateX(0)'
+  					height: '0'
   				},
   				to: {
-  					transform: 'translateX(calc(-100% - var(--gap)))'
+  					height: 'var(--radix-accordion-content-height)'
   				}
   			},
-  			'marquee-vertical': {
+  			'accordion-up': {
   				from: {
-  					transform: 'translateY(0)'
+  					height: 'var(--radix-accordion-content-height)'
   				},
   				to: {
-  					transform: 'translateY(calc(-100% - var(--gap)))'
+  					height: '0'
   				}
   			},
   			'border-beam': {
   				'100%': {
   					'offset-distance': '100%'
-  				}
-  			},
-  			rainbow: {
-  				'0%': {
-  					'background-position': '0%'
-  				},
-  				'100%': {
-  					'background-position': '200%'
-  				}
-  			},
-  			shine: {
-  				'0%': {
-  					'background-position': '0% 0%'
-  				},
-  				'50%': {
-  					'background-position': '100% 100%'
-  				},
-  				to: {
-  					'background-position': '0% 0%'
   				}
   			},
   			'background-position-spin': {
@@ -109,18 +92,26 @@ const config: Config = {
   				'100%': {
   					backgroundPosition: 'bottom center'
   				}
+  			},
+  			rainbow: {
+  				'0%': {
+  					'background-position': '0%'
+  				},
+  				'100%': {
+  					'background-position': '200%'
+  				}
   			}
   		},
   		animation: {
-  			marquee: 'marquee var(--duration) infinite linear',
-  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-  			rainbow: 'rainbow var(--speed, 2s) infinite linear',
-  			shine: 'shine var(--duration) infinite linear',
-  			'background-position-spin': 'background-position-spin 3000ms infinite alternate'
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate',
+  			rainbow: 'rainbow var(--speed, 2s) infinite linear'
   		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
-};
-export default config;
+} satisfies Config
+
+export default config

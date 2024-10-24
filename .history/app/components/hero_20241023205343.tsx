@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { GridPattern } from "@/components/ui/grid-pattern";
 import { BorderBeam } from "@/components/ui/border-beam";
 import Image from "next/image";
-import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export function Hero() {
   return (

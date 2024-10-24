@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { GridPattern } from "@/components/ui/grid-pattern";
 import { BorderBeam } from "@/components/ui/border-beam";
 import Image from "next/image";
-import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export function Hero() {
   return (
@@ -28,7 +27,7 @@ export function Hero() {
                 Discover the latest shows and events in sneakers and vintage fashion, all in one place.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                <RainbowButton className="w-full sm:w-auto">Get Started</RainbowButton>
+                <RainbowButtonProps className="w-full sm:w-auto">Get Started</RainbowButton>
                 <Button size="lg" variant="outline">Learn More</Button>
               </div>
             </div>

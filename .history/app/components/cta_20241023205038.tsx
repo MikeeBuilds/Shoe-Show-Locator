@@ -23,7 +23,7 @@ export default function CallToAction() {
             <p className="mb-12 max-w-md text-lg text-slate-600 dark:text-slate-300">
               Join our community of sneaker collectors and vintage clothing aficionados. Buy, sell, and attend exclusive events.
             </p>
-            <RainbowButton className="z-20 font-semibold">
+            <RainbowButton className="z-50">
               Join the Community
             </RainbowButton>
           </div>

@@ -7,11 +7,9 @@ const faqData = [
     answer: (
       <div className="space-y-2 leading-relaxed">
         <p>
-          The Sneaker & Vintage Hub is a platform designed for sneakerheads,
-          vintage clothing enthusiasts, and collectors. Whether you&apos;re
-          looking to attend one of the events listed on our app or using our
-          seller marketplace, we offer a space to buy, sell, and connect with
-          like-minded individuals.
+          <div>
+            The Sneaker & Vintage Hub is a platform designed for sneakerheads, vintage clothing enthusiasts, and collectors. Whether you&apos;re looking to attend one of the events listed on our app or using our seller marketplace, we offer a space to buy, sell, and connect with like-minded individuals.
+          </div>
         </p>
       </div>
     ),
@@ -81,9 +79,7 @@ const FAQItem = ({
         onClick={onClick}
         aria-expanded={isOpen}
       >
-        <span className="flex-1 text-slate-800 dark:text-[#ff9501]">
-          {question}
-        </span>
+        <span className="flex-1 text-slate-800 dark:text-[#ff9501]">{question}</span>
         <svg
           className={`ml-auto h-4 w-4 flex-shrink-0 fill-current transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
@@ -119,9 +115,7 @@ export default function FrequentlyAskedQuestions() {
       <div className="mx-auto max-w-7xl px-8 py-24">
         <div className="flex flex-col gap-12 md:flex-row">
           <div className="flex basis-1/2 flex-col text-left">
-            <p className="mb-4 inline-block font-bold text-[#ff9501] dark:text-slate-200">
-              FAQ
-            </p>
+            <p className="mb-4 inline-block font-bold text-[#ff9501] dark:text-slate-200">FAQ</p>
             <p className="text-3xl font-extrabold text-[#ff9501] dark:text-slate-200 md:text-4xl">
               Frequently Asked Questions
             </p>
